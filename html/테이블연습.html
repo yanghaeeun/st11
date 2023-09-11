@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블연습</title>
+</head>
+
+
+<body>
+  <h1>테이블연습</h1>
+  <!-- 테이블은 시작끝 선언 -->
+  <table border="1 ">
+    <!-- 줄선언 -->
+    <tr>
+    <!-- 데이터 들어갈 칸 선언 -->
+    <td>지역</td>
+    <td>담당</td>
+    <td>전화번호</td>
+    <td>이름</td>
+    </tr>
+
+    <tr>
+    <!-- 데이터 들어갈 칸 선언 -->
+    <td>용인</td>
+    <td>구성</td>
+    <td>031-1234-1234</td>
+    <td>홍길동</td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+<h2> 논리적인 테이블 영역 구분</h2>
+<style>
+  thead{background-color: #8f6;}
+  tfoot{background-color: #68f;}
+</style>
+<table border="1">
+<!-- 표의 머리글 -->
+<thead>
+<!-- te>td*3>{머릿글$} -->
+  <tr>
+   <td>머리글1</td>
+   <td>머리글2</td>
+   <td>머리글3</td>
+    </tr>
+    <!-- tr>th*3>{제목} -->
+    <tr>
+      <th>제목</th>
+      <th>제목</th>
+      <th>제목</th>
+    </tr>
+  </thead>
+
+<!-- 표의 본문 -->
+<tbody>
+  <!-- tr*4>td*3>{내용$} -->
+<tr>
+  <td>내용1</td>
+  <td>내용2</td>
+  <td>내용3</td>
+</tr>
+<tr>
+  <td>내용1</td>
+  <td>내용2</td>
+  <td>내용3</td>
+</tr>
+<tr>
+  <td>내용1</td>
+  <td>내용2</td>
+  <td>내용3</td>
+</tr>
+<tr>
+  <td>내용1</td>
+  <td>내용2</td>
+  <td>내용3</td>
+</tr>
+</tbody>
+
+</table>
+
+
+<!-- 표의 꼬리글 -->
+<tfoot>
+  <!-- tr*2>td*3>{꼬릿말$} -->
+  <tr>
+    <td>꼬릿말1</td>
+    <td>꼬릿말2</td>
+    <td>꼬릿말3</td>
+  </tr>
+  <tr>
+    <td>꼬릿말1</td>
+    <td>꼬릿말2</td>
+    <td>꼬릿말3</td>
+  </tr>
+</tfoot>
+</table >
+
+
+
+
+
+
+<h2>테이블의 제목셀 th</h2>
+<table border="1">
+  <!-- tr>th*4>{제목$} -->
+  <tr>
+    <th></th>
+    <th scope="col">제목2</th>
+    <th scope="col">제목3</th>
+    <th scope="col">제목4</th>
+  </tr>
+
+  <!-- tr*2>td*4>{내용$} -->
+  <tr>
+    <th scope="row">제목1</th>
+    <td>내용2</td>
+    <td>내용3</td>
+    <td>내용4</td>
+  </tr>
+  <tr>
+    <th scope="row">제목2</th>
+    <td>내용2</td>
+    <td>내용3</td>
+    <td>내용4</td>
+  </tr>
+
+</table>
+
+
+
+
+
+
+
+<h2>컬럼의 논리적인 그룹 col, colgruop</h2>
+<table class="table4">
+  <style>
+    .table4{
+      border:1px solid #000;
+      width:80%;
+
+    }
+  </style>
+  <colgroup>
+
+   <col class="col1">
+   <col class="col23" span="2">
+   <col class="col4">
+
+
+  </colgroup>p
+<style>
+  .col1{background-color: #8f6;}
+  .col23{background-color: #f68;}
+  .col4{background-color: #68f;}
+</style>
+
+
+  <!-- tr>th*4>{제목$} -->
+  <tr>
+    <th>제목1</th>
+    <th>제목2</th>
+    <th>제목3</th>
+    <th>제목4</th>
+  </tr>
+  <!-- tr*4>td*4>{내용} -->
+  <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+<h2>줄칸 합치기 colsapn rowspan</h2>
+<!-- 6줄 4칸 -->
+<table border="1" width="80%">
+  <!-- tr*6>td*4>{내용} -->
+  <!-- 첫번째 줄 tr -->
+  <tr>
+    <td rowspan="2"></td>
+    <td>내용</td>
+    <td colspan="2">강의장소</td>
+    <!-- 네번째 COL -->
+  </tr>
+  <tr>
+    <!-- 두번째 tr-->
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <td rowspan="2">디자인</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <!-- 네번째 tr -->
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <td rowspan="2">프론트</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <!-- <td>여섯째</td> -->
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+</table>
+
+
+</body>
+</html>
