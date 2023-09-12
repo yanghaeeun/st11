@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블연습</title>
+</head>
+
+
+
+
+
+
+
+
+
+<body >
+<h1>테이블 기본연습</h1>
+  <table border="1">  
+    <!-- 원래는 스타일시트로 구성한다네 -->
+    <!-- 테이블은 시작과 끝을 선언 -->
+    <tr></tr>
+    <!-- tr은 줄이 시작됨을 선언 2열이니까 1열 시작됨 선언 -->
+    <td>지역</td>
+    <td>담당</td>
+    <td>전화번호</td>
+    <td>이름</td>
+
+    <tr></tr>
+    <!-- 2열이 시작됨을 선언 -->
+    <td>용인</td>
+    <td>구성</td>
+    <td>031-1234-1234</td>
+    <td>홍길동</td>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <h2>논리적인 테이블 영역구분</h2> 
+   <!-- 테이블의 자식으로 thead , tbody ,tfoot으로 구분하기도 한대(행구분)-->
+<!-- <그러니깐 이런식인거야 머리몸발>tr>td=th 이런거일걸? ㅇㅇ  --> 
+<style>
+  thead{background-color: firebrick;}
+  tfoot{background-color: #c89;}
+</style>
+<table border="1">
+  <thead>
+    <td>머리글1</td>
+    <td>머리글2</td>
+    <td>머리글3</td>
+  </thead>
+  <thead>
+    <tr></tr>
+    <td>제목</td>
+    <td>제목</td>
+    <td>제목</td>
+  </thead>
+
+<tbody>
+  <td>내용1</td>
+  <td>내용2</td>
+  <td>내용3</td>
+</tbody>
+<tbody>
+  <td>내용1</td>
+  <td>내용2</td>
+  <td>내용3</td>
+</tbody>
+<tbody>
+  <td>내용1</td>
+  <td>내용2</td>
+  <td>내용3</td>
+</tbody>
+<tbody>
+  <td>내용1</td>
+  <td>내용2</td>
+  <td>내용3</td>
+</tbody>
+
+<tfoot>
+  <td>꼬릿말1</td>
+  <td>꼬릿말2</td>
+  <td>꼬릿말3</td>
+</tfoot>
+<tfoot>
+  <td>꼬릿말1</td>
+  <td>꼬릿말2</td>
+  <td>꼬릿말3</td>
+</tfoot>
+</table>
+
+
+
+
+
+
+
+
+<h3>테이블의 제목셀 th</h3>
+<table>
+  <table border="1">
+  <tr>
+    <td></td>
+    <th scope="col">제목2</th>
+    <th scope="col">제목3</th>
+    <th scope="col">제목4</th>
+  </tr>
+  <tr>
+    <th scope="row">제목1</th>
+    <td>내용2</td>
+    <td>내용3</td>
+    <td>내용4</td>
+  </tr>
+  <tr>
+    <th scope="row">제목2</th>
+    <td>내용2</td>
+    <td>내용3</td>
+    <td>내용4</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<h4>컬럼의 논리적인 그룹</h4>
+<table class="table4">
+  <style>
+.table4
+{border:1px solid;
+  width:80%;}
+  </style>
+
+
+  <colgroup>
+   <col class="col1">
+   <col class="col23" span="2">
+   <col class="col4">
+  </colgroup>
+
+<style>
+  .col1{background-color: #c89;}
+  .col23{background-color: #d11}
+  .col4{background-color: #e333;}
+</style>
+
+<tr>
+  <th>제목1</th>
+  <th>제목2</th>
+  <th>제목3</th>
+  <th>제목4</th>
+</tr>
+
+<tr>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+</tr>
+<tr>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+</tr>
+<tr>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+</tr>
+<tr>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+</tr>
+
+
+
+
+
+<h5>줄칸 합치기 colspan, rowspan</h5>
+
+<table border="1
+">
+  <style>
+    .table999{border:1px solid; width:80%;}
+  </style>
+
+
+
+
+
+<tr>
+  <td rowspan="2"></td>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+</tr>
+<tr>
+  <!-- <td>/내용</td> -->
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+</tr>
+<tr>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+</tr>
+<tr>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+</tr>
+<tr>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+</tr>
+<tr>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+  <td>내용</td>
+</tr>
+
+</table>
+
+
+
+
+
+</table>
+
+
+</body>
+</html>
